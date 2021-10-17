@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Google Map</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <style>
+    #map{
+        height:700px;
+        width:100%;
+    }
+	#locateButton{
+		margin-top:12%;
+		margin-left:35%;
+	}
+	#mapButton{
+		margin-top:12%;
+		margin-left:55%;
+	}
+	@media screen and (max-width: 600px) {
+	#locateButton {
+	margin-top:37%;
+	margin-left:10%;
+  }
+}
+@media screen and (max-width: 600px) {
+	#mapButton {
+	margin-top:37%;
+	margin-left:30%;
+  }
+}
+</style>
+</head>
+<body>
+  <p>Covid hospitals near me.</p>
+  <button id="locateButton" onclick="getLocation()">Allow Location Access</button>
+  <button id="mapButton" onclick="initMap()" disabled>Locate hospitals</button>
+
+  <div id="map"></div>
+
+  <script src="/static/dist/js/user_location.js"></script>
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHr7Zk-frP16J_4rrI6nyqGMNYEtQBVLs">
+  </script>
+</body>
+</html>

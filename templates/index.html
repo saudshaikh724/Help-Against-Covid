@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HelpAgainstCovid</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
+    <link rel="stylesheet" href="/static/dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("p").on('click', function(event) {
+
+    if (this.hash !== "") {
+
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $("#container").offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
+    <style type="text/css">
+    .card{
+      float: left;
+      margin-left: 20px;
+      margin-top: 20px;
+      box-shadow: 5px 3px 3px ;
+      width: 300px;
+    }
+	@media (prefers-reduced-motion: no-preference) {
+	#abc{
+	animation: App-logo-spin infinite 15s linear;
+	}
+	@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+
+}
+}
+::-webkit-scrollbar {
+            width: 10px;
+        }
+
+         ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+         ::-webkit-scrollbar-thumb {
+            background: #793dc9;
+        }
+
+         ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        #abcd {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: none;
+            outline: none;
+            border-style: none;
+        }
+
+        #maindiv {
+            position: fixed;
+            box-shadow: 1px 2px 4px;
+			bottom:70px;
+			right:20px;
+            display: none;
+            width: 320px;
+            height: 370px;
+            border-radius: 15px;
+            background-color: white;
+        }
+
+        #msgicon {
+            width: 10px;
+            height: 10px;
+            border-style: none;
+            background: none;
+        }
+
+        #sa {
+            color: white;
+			margin-top:10px;
+            margin-left:200px;
+			margin-bottom:10px;
+            background-color: rgb(78, 54, 214);
+            border-top-right-radius: 10px;
+            display: inline-block;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            box-shadow: 1px 2px 3px;
+        }
+
+        #sb {
+            background-color: wheat;
+            margin-right: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-top-left-radius: 10px;
+            display: inline-block;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-shadow: 1px 2px 3px;
+        }
+        #hd{
+          width: 100%;
+          padding-left: 10px;
+          background-color: rgb(48, 174, 224);
+          height:20%;
+          color:white;
+          border-top-right-radius:15px;
+		  border-top-left-radius:15px;
+        }
+  </style>
+</head>
+
+<body class="is-boxed has-animations" style="height: 100%;">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="http://127.0.0.1:500">
+                                <img id="abc" src="static/images/coronavirus.png" width="64" height="64" viewBox="0 0 64 64" alt="alternatetext">
+                            </a>
+                        </h1>
+                    </div>
+                    <ul class="header-links list-reset m-0">
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="/contact">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero text-light text-center">
+                <div class="container-sm">
+                    <div class="hero-inner">
+                        <h1 class="hero-title h2-mobile mt-0 is-revealing" style="visibility: visible;">Help Against Covid</h1>
+                        <p class="hero-paragraph is-revealing" style="visibility: visible;">We have built a solution for COVID 19, implemented using python and flask. We simplify the use of google maps by our user-friendly interface.</p>
+                        <p class="hero-cta is-revealing" style="visibility: visible;" id="test"><a class="button button-secondary button-shadow" href="/#">Get started now</a></p>
+
+                    </div>
+                </div>
+            </section>
+            <div class="container" id="container">
+  <div class="card" style="width:240px">
+    <img class="card-img-top" src="static/images/location.jpg" alt="Card image" style="width:100%;height: 200px">
+    <div class="card-body">
+      <h4 class="card-title">Near By Hospital</h4>
+      <p class="card-text">Helps to find nearby covid hospital </p>
+      <a class="button button-secondary button-shadow" href="/hospital">View</a>
+    </div>
+  </div>
+  <div class="card" style="width:240px">
+    <img class="card-img-top" src="static/images/vaccine.jpg" alt="Card image" style="width:100%;height: 200px">
+    <div class="card-body">
+      <h4 class="card-title">Vaccine avilability</h4>
+      <p class="card-text">Help to find vaccine available nearby</p>
+      <a class="button button-secondary button-shadow" href="/vaccine">View</a>
+    </div>
+  </div>
+  <div class="card" style="width:240px">
+    <img class="card-img-top" src="static/images/plasma.jpg" alt="Card image" style="width:100%;height: 200px">
+    <div class="card-body">
+      <h4 class="card-title">Plasma avilability</h4>
+      <p class="card-text">Helps to find plasma availability</p>
+      <a class="button button-secondary button-shadow" href="/plasma">View</a>
+    </div>
+  </div>
+  <div class="card" style="width:240px">
+    <img class="card-img-top" src="static/images/oxygen.jpeg" alt="Card image" style="width:100%;height: 200px">
+    <div class="card-body">
+      <h4 class="card-title">Oxygen avilability</h4>
+      <p class="card-text">Helps to find oxygen availability</p>
+      <a class="button button-secondary button-shadow" href="/oxygen">View</a>
+    </div>
+  </div>
+  <br>
+</div>
+ </main>
+<div id="maindiv">
+          <div id="hd">
+          <img src="static/images/chatbot.png" style="width:20%;height:100%;padding-top: 10px;"><b style="margin-left: 30%; margin-top: -10%;position: absolute;font-size: 15px;">COVID 19 Chatbot</b>
+          </div>
+          <div id="ctbox" style="overflow-y: scroll;width: 100%;height: 69%;padding-left: 15px;">
+              <p id="test123"></p>
+          </div>
+          <form method="post" id="todo-form">
+              <input type="text" id="todo" placeholder="Enter Message" style="autocomplete:off;outline:none;width: 79%;height: 25px;border-style: none;padding-left: 10px;"><button id="msgicon"><i class="fa fa-paper-plane" style='font-size:30px;color:rgb(30, 106, 177)' aria-hidden="true"></i></button><br>
+          </form>
+    </div>
+<button type="submit" id="abcd" ><i class='fa fa-comments' style='font-size:48px;color:rgb(61, 212, 61)'></i></button>
+
+<footer class="site-footer">
+	<div class="container">
+		<div class="copyright text-center my-auto">
+			<span>Copyright © HelpAgainstCovid 2021</span>
+	</div>
+</footer>
+    </div>
+    <script src="/static/dist/js/main.min.js"></script>
+  
+      <script type="text/javascript">
+          $(document).on('submit', '#todo-form', function(e) {
+              //preventing to submit
+              e.preventDefault();
+  
+              //taking value to variable from textbox
+              var usrMsg = $("#todo").val();
+  
+              //ajax get method to send data and take response
+              $.get("/get", {
+                  msg: usrMsg
+              }).done(function(data) {
+                  $("#test123").append(data);
+              });
+          });
+      </script>
+      <script type="text/javascript">
+          $(document).ready(function() {
+              $("#abcd").click(function() {
+                  $("#maindiv").hide();
+              }); 
+              $("#abcd").dblclick(function() {
+                  $("#maindiv").show();
+              });
+          });
+      </script>
+</body>
+</html>

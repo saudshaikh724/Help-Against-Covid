@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HelpAgainstCovid</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
+    <link rel="stylesheet" href="/static/dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+::-webkit-scrollbar {
+            width: 10px;
+        }
+
+         ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+         ::-webkit-scrollbar-thumb {
+            background: #793dc9;
+        }
+
+         ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        #abcd {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: none;
+            outline: none;
+            border-style: none;
+        }
+
+        #maindiv {
+            position: fixed;
+            bottom: 70px;
+            right: 30px;
+            box-shadow: 1px 2px 4px;
+            display: none;
+            width: 30%;
+            height: 75%;
+            border-radius: 15px;
+            background-color: white;
+        }
+
+        #msgicon {
+            width: 20px;
+            height: 20px;
+            border-style: none;
+            background: none;
+        }
+
+        #a {
+            color: white;
+            margin-left: 300px;
+            background-color: rgb(78, 54, 214);
+            border-top-right-radius: 10px;
+            display: inline-block;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            box-shadow: 1px 2px 3px;
+        }
+
+        #b {
+            background-color: wheat
+            margin-left: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-top-left-radius: 10px;
+            display: inline-block;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-shadow: 1px 2px 3px;
+        }
+        #hd{
+          width: 100%;
+          padding-left: 10px;
+          background-color: rgb(48, 174, 224);
+          height:20%;
+          color:white;
+          border-radius: 15px; 
+        }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="is-boxed has-animations" style="height: 100%;">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="http://127.0.0.1:500">
+                                <img src="static/images/coronavirus.png" width="64" height="64" viewBox="0 0 64 64" alt="alternatetext">
+                            </a>
+                        </h1>
+                    </div>
+                    <ul class="header-links list-reset m-0">
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="/contact">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main>
+		   <p style="position: absolute;color: rgba(255, 255, 255, 0.8);margin-left: 37%;margin-top: -7%;font-size: 40px;font-weight: 1000;font-family: 'Lato', sans-serif">Help Against Covid</p><br>
+        </main>
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Doctor List
+                </button>
+              </h2>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <div class="card-body">
+                  <input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Search for Address.." title="Type in a name">
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                      <thead>
+                        <tr>
+    
+                          <th>Name</th>
+                          <th>Address</th>
+                          <th>Phone No</th>
+                        </tr>
+                      </thead>
+                      <!--<tfoot>
+                        <tr>
+                          <th>#</th>
+                          <th>Transaction</th>
+                          <th>Hash</th>
+                        </tr>
+                      </tfoot>-->
+                      <tbody>
+                        {% for row in range(length) %}
+                        <tr>
+                          <td>{{docttable[row][0]}}</td>
+                          <td>{{docttable[row][1]}}</td>
+                          <td>{{docttable[row][2]}}</td>
+                        </tr>
+                    {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Symptoms of COVID-19
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>People with COVID-19 have had a wide range of symptoms reported – ranging from mild symptoms to severe illness. Symptoms may appear 2-14 days after exposure to the virus. Anyone can have mild to severe symptoms. People with these symptoms may have COVID-19:</p>
+                <ol>
+                  <li>Fever or chills</li>
+                  <li>Cough</li> 
+                  <li>Shortness of breath or difficulty breathing</li> 
+                  <li>Fatigue</li> 
+                  <li>Muscle or body aches</li> 
+                  <li>Headache</li> 
+                  <li>New loss of taste or smell</li> 
+                  <li>Sore throat</li> 
+                  <li>Congestion or runny nose</li> 
+                  <li>Nausea or vomiting</li> 
+                  <li>Diarrhea</li> 
+                </ol>
+  
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div id="maindiv">
+          <div id="hd">
+          <img src="static/images/chatbot.png" style="width
+          :20%;height:80%;padding-top: 10px;"><b style="margin-left: 30%; margin-top: -10%;position: absolute;font-size: 25px;">COVID 19 Chatbot</b>
+          </div>
+          <div id="ctbox" style="overflow-y: scroll;width: 100%;height: 69%;padding-left: 15px;">
+              <p id="test"></p>
+          </div>
+          <form method="post" id="todo-form">
+              <input type="text" id="todo" placeholder="Enter Message" style="autocomplete:off;outline:none;width: 79%;height: 25px;border-style: none;padding-left: 10px;"><button id="msgicon"><i class="fa fa-paper-plane" style='font-size:30px;color:rgb(30, 106, 177)' aria-hidden="true"></i></button><br>
+          </form>
+      </div>
+  
+      <button type="submit" id="abcd"><i class='fa fa-comments' style='font-size:48px;color:rgb(61, 212, 61)'></i></button>
+  
+      <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  
+      <script type="text/javascript">
+          $(document).on('submit', '#todo-form', function(e) {
+              //preventing to submit
+              e.preventDefault();
+  
+              //taking value to variable from textbox
+              var usrMsg = $("#todo").val();
+  
+              //ajax get method to send data and take response
+              $.get("/get", {
+                  msg: usrMsg
+              }).done(function(data) {
+                  $("#test").append(data);
+              });
+          });
+      </script>
+      <script type="text/javascript">
+          $(document).ready(function() {
+              $("#abcd").click(function() {
+                  $("#maindiv").hide();
+              }); 
+              $("#abcd").dblclick(function() {
+                  $("#maindiv").show();
+              });
+          });
+      </script>
+      <script>
+        function myFunction() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("dataTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }       
+          }
+        }
+        </script>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © HelpAgainstCovid 2021</span>
+            </div>
+        </footer>
+    </div>
+    <script src="/static/dist/js/main.min.js"></script>
+
+</body>
+</html>

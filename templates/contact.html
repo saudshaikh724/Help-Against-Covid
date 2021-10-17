@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HelpAgainstCovid</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
+    <link rel="stylesheet" href="/static/dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style type="text/css">
+      #a,#b,#c{
+        border-right: none;
+        border-top: none;
+        border-left:none;
+        border-bottom: 2px solid black;
+        outline-color: none;
+        border-radius: 0px;
+        background-color: transparent;
+      }
+
+      #abc{
+          animation: App-logo-spin infinite 15s linear;
+          }
+          @keyframes App-logo-spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+  </style>
+</head>
+
+<body class="is-boxed has-animations" style="height: 100%;">
+    <div class="body-wrap boxed-container">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="http://127.0.0.1:500">
+                                <img src="static/images/coronavirus.png" width="64" height="64" viewBox="0 0 64 64" alt="alternatetext" id="abc">
+                            </a>
+                        </h1>
+                    </div>
+                    <ul class="header-links list-reset m-0">
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="/contact">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+		<div class="container" style="position: absolute;width: 430px;margin-left: 14%;margin-top: 10%;border-radius: 10px;background-color: transparent;">
+      <p style="color: white;font-family: 'Lato', sans-serif;color: rgba(255, 255, 255, 0.8);margin-left: 30%">CONTACT US</p>
+		  <form action="" style="padding-right: 12px;padding-left: 10px;padding-bottom: 13px;padding-top: 10px;box-shadow: 
+        1px 2px 10px;background-color: rgba(255,255,255,1);opacity: 0.5">
+        <div class="form-group">
+        <label for="email" style="font-family: 'Lato', sans-serif;color: rgba(0, 0, 0, 0.8);">Name</label>
+        <input type="text" id="a" class="form-control" id="email" placeholder="Enter email" name="email" style="width: 350px;height: 30px">
+      </div>
+			<div class="form-group">
+			  <label for="email" style="font-family: 'Lato', sans-serif;color: rgba(0, 0, 0, 0.8);">Email:</label>
+			  <input type="email" id="b" class="form-control" id="email" placeholder="Enter email" name="email" style="width: 350px;height: 30px">
+			</div>
+			<div class="form-group">
+			  <label for="pwd" style="color: green;font-family: 'Lato', sans-serif;color: rgba(0, 0, 0, 0.8);">comments</label>
+			  <input type="text" id="c" class="form-control" id="pwd" placeholder="Comments Here..." name="pwd" style="width: 350px;height: 30px">
+			</div>
+			<button type="submit" class="btn btn-outline-success" style="width: 350px;height: 40px">Submit</button>
+		  </form><br>
+		</div>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © HelpAgainstCovid 2021</span>
+            </div>
+        </footer>
+    </div>
+    <script src="/static/dist/js/main.min.js"></script>
+
+</body>
+</html>
